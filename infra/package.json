@@ -1,0 +1,28 @@
+{
+  "name": "data-services-interview",
+  "version": "1.0.0",
+  "bin": {
+    "infra": "bin/infra.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "deploy-production": "npx cdk deploy --require-approval never -c config=production --outputs-file ./cdk-outputs.json",
+    "deploy-dev": "npx cdk deploy --require-approval never -c config=development --outputs-file ./cdk-outputs.json",
+    "remove-dev": "npx cdk destroy --require-approval never -c config=development --outputs-file ./cdk-outputs.json"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.10",
+    "@types/node": "10.17.27",
+    "aws-cdk": "^2.24.1",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.241.0",
+    "aws-cdk-lib": "^2.24.1",
+    "source-map-support": "^0.5.16"
+  }
+}

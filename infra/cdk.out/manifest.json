@@ -1,0 +1,123 @@
+{
+  "version": "29.0.0",
+  "artifacts": {
+    "InterviewStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "InterviewStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "InterviewStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://613128072254/eu-west-1",
+      "properties": {
+        "templateFile": "InterviewStack.template.json",
+        "tags": {
+          "CreatedBy": "DataServices",
+          "OwnedBy": "DataServices",
+          "Product": "interview",
+          "ServiceLevel": "bronze"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::613128072254:role/cdk-hnb659fds-deploy-role-613128072254-eu-west-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::613128072254:role/cdk-hnb659fds-cfn-exec-role-613128072254-eu-west-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-613128072254-eu-west-1/6875d4d5c151a7205fed4e7b8419ca73b7aed4da6e671fda3f0fd8ef04d1163c.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "InterviewStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::613128072254:role/cdk-hnb659fds-lookup-role-613128072254-eu-west-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "InterviewStack.assets"
+      ],
+      "metadata": {
+        "/InterviewStack": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "CreatedBy",
+                "Value": "DataServices"
+              },
+              {
+                "Key": "OwnedBy",
+                "Value": "DataServices"
+              },
+              {
+                "Key": "Product",
+                "Value": "interview"
+              },
+              {
+                "Key": "ServiceLevel",
+                "Value": "bronze"
+              }
+            ]
+          }
+        ],
+        "/InterviewStack/Interview/ExporterLambdaArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InterviewExporterLambdaArn6EAAC305"
+          }
+        ],
+        "/InterviewStack/Interview/ExporterLambdaName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InterviewExporterLambdaNameFF0FB339"
+          }
+        ],
+        "/InterviewStack/InterviewExporter/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InterviewExporterServiceRoleC3D7863C"
+          }
+        ],
+        "/InterviewStack/InterviewExporter/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InterviewExporterSecurityGroup3B6DA5FE"
+          }
+        ],
+        "/InterviewStack/InterviewExporter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InterviewExporter3E180152"
+          }
+        ],
+        "/InterviewStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/InterviewStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/InterviewStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "InterviewStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

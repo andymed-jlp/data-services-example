@@ -1,0 +1,9 @@
+{
+  "app": "npx ts-node --prefer-ts-exts app/infra.ts",
+  "context": {
+    "aws-cdk:enableDiffNoFail": true,
+    "development": {
+      "vpcId": "vpc-09e7e215aa75c925e"
+    }
+  }
+}
