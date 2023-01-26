@@ -24,7 +24,7 @@ if (!contextEnv) {
 }
 
 new InterviewStack(app, "InterviewStack", {
-  description: "Provisions the Cheetah Integration components",
+  description: "Provisions the Interview components",
   tags: {
     CreatedBy: "DataServices",
     OwnedBy: "DataServices",
